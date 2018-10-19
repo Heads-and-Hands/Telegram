@@ -36,6 +36,13 @@
     }];
 }
 
+- (UIImage *)tabBarRedmineIcon
+{
+    return [self imageWithKey:@"tabRedmine" generator:^UIImage *{
+        return [TGPresentationAssets tabBarRedmineIcon:self.pallete.tabIconColor];
+    }];
+}
+
 - (UIImage *)tabBarSettingsIcon
 {
     return [self imageWithKey:@"tabSettings" generator:^UIImage *{

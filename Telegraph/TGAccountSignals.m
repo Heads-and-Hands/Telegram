@@ -323,7 +323,7 @@
             
             int32_t apiId = 0;
             NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
-            SETUP_API_ID(apiId)
+            SETUP_API_ID(apiId);
             
             apiEnvironment.apiId = apiId;
             

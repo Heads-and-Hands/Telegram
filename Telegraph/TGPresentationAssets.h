@@ -6,6 +6,7 @@
 + (UIImage *)tabBarContactsIcon:(UIColor *)color;
 + (UIImage *)tabBarCallsIcon:(UIColor *)color;
 + (UIImage *)tabBarChatsIcon:(UIColor *)color;
++ (UIImage *)tabBarRedmineIcon:(UIColor *)color;
 + (UIImage *)tabBarSettingsIcon:(UIColor *)color;
 
 // Calls

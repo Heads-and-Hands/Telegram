@@ -84,7 +84,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>org.telegram.TelegramHD</string>
+			<string>ru.handh.hhtelegram..TelegramHD</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>telegram</string>
@@ -94,7 +94,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>org.telegram.TelegramHD.compatibility</string>
+			<string>ru.handh.hhtelegram..TelegramHD.compatibility</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tg</string>
@@ -104,7 +104,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>org.telegram.TelegramHD.dropbox</string>
+			<string>ru.handh.hhtelegram..TelegramHD.dropbox</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>db-pa9wtoz9l514anx</string>
@@ -112,7 +112,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>67581</string>
+	<string>67614</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>ITSAppUsesNonExemptEncryption </key>
@@ -178,7 +178,7 @@
 	<string>You can use Siri to send messages.</string>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>org.telegram.conversation</string>
+		<string>ru.handh.hhtelegram.conversation</string>
 	</array>
 	<key>UIAppFonts</key>
 	<array>
@@ -259,7 +259,7 @@
 			<key>UTTypeDescription</key>
 			<string>WebP File</string>
 			<key>UTTypeIdentifier</key>
-			<string>org.telegram.Telegram.webp</string>
+			<string>ru.handh.hhtelegram..Telegram.webp</string>
 			<key>UTTypeTagSpecification</key>
 			<dict>
 				<key>public.filename-extension</key>

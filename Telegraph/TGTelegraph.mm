@@ -335,8 +335,8 @@ typedef std::map<int, std::pair<TGUser *, int > >::iterator UserDataToDispatchIt
             
             int32_t apiId = 0;
             NSString *apiHash = @"";
-            SETUP_API_ID(apiId)
-            SETUP_API_HASH(apiHash)
+            SETUP_API_ID(apiId);
+            SETUP_API_HASH(apiHash);
             
             assert(apiId != 0);
             assert(apiHash.length != 0);
@@ -1572,12 +1572,12 @@ typedef std::map<int, std::pair<TGUser *, int > >::iterator UserDataToDispatchIt
 
 - (void)processAuthorizedWithUserId:(int)uid clientIsActivated:(bool)clientIsActivated
 {
-    if (iosMajorVersion() >= 10) {
-        TGDispatchOnMainThread(^{
-            [INPreferences requestSiriAuthorization:^(__unused INSiriAuthorizationStatus status) {
-            }];
-        });
-    }
+//    if (iosMajorVersion() >= 10) {
+//        TGDispatchOnMainThread(^{
+//            [INPreferences requestSiriAuthorization:^(__unused INSiriAuthorizationStatus status) {
+//            }];
+//        });
+//    }
     
     [ActionStageInstance() dispatchOnStageQueue:^
     {

@@ -3,6 +3,7 @@
 #import <SSignalKit/SSignalKit.h>
 
 @class TGDialogListController;
+@class TGRedmineViewController;
 @class TGContactsController;
 @class TGAccountSettingsController;
 @class TGRecentCallsController;
@@ -14,6 +15,7 @@
 
 @property (nonatomic, strong, readonly) TGMainTabsController *mainTabsController;
 @property (nonatomic, strong, readonly) TGDialogListController *dialogListController;
+@property (nonatomic, strong, readonly) TGRedmineViewController *redmineViewController;
 @property (nonatomic, strong, readonly) TGContactsController *contactsController;
 @property (nonatomic, strong) TGAccountSettingsController *accountSettingsController;
 @property (nonatomic, strong, readonly) TGRecentCallsController *callsController;

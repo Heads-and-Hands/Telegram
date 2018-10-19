@@ -26,7 +26,6 @@
 		692AB8D91E6759DD00706ACC /* CongestionControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 692AB8981E6759DD00706ACC /* CongestionControl.h */; };
 		692AB8DA1E6759DD00706ACC /* EchoCanceller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 692AB8991E6759DD00706ACC /* EchoCanceller.cpp */; };
 		692AB8DB1E6759DD00706ACC /* EchoCanceller.h in Headers */ = {isa = PBXBuildFile; fileRef = 692AB89A1E6759DD00706ACC /* EchoCanceller.h */; };
-		692AB8E51E6759DD00706ACC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 692AB8A71E6759DD00706ACC /* Info.plist */; };
 		692AB8E61E6759DD00706ACC /* JitterBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 692AB8A81E6759DD00706ACC /* JitterBuffer.cpp */; };
 		692AB8E71E6759DD00706ACC /* JitterBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 692AB8A91E6759DD00706ACC /* JitterBuffer.h */; };
 		692AB8E81E6759DD00706ACC /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 692AB8AA1E6759DD00706ACC /* logging.h */; };
@@ -1021,35 +1020,35 @@
 		692AB9111E675E8800706ACC /* Telegram.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = Telegram.app;
+			path = HHTelegram.app;
 			remoteRef = 692AB9101E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		692AB9131E675E8800706ACC /* Share.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
-			path = Share.appex;
+			path = HHShare.appex;
 			remoteRef = 692AB9121E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		692AB9151E675E8800706ACC /* watchkitapp.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			path = watchkitapp.app;
+			path = HHWatchkitApp.app;
 			remoteRef = 692AB9141E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		692AB9171E675E8800706ACC /* watchkitapp Extension.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
-			path = "watchkitapp Extension.appex";
+			path = "HHWatchkitApp Extension.appex";
 			remoteRef = 692AB9161E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		692AB9191E675E8800706ACC /* SiriIntents.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
-			path = SiriIntents.appex;
+			path = HHSiriIntents.appex;
 			remoteRef = 692AB9181E675E8800706ACC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1063,7 +1062,7 @@
 		69960A0E1EF85C2900F9D091 /* Widget.appex */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.app-extension";
-			path = Widget.appex;
+			path = HHWidget.appex;
 			remoteRef = 69960A0D1EF85C2900F9D091 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1074,7 +1073,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				692AB8E51E6759DD00706ACC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

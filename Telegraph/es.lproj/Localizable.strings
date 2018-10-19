@@ -85,6 +85,8 @@
 // Common
 "Common.OK" = "OK";
 "Common.Cancel" = "Cancelar";
+"Common.Error" = "Error";
+"Common.Reloading" = "Recarga";
 "Common.Edit" = "Editar";
 "Common.edit" = "editar";
 "Common.Done" = "Hecho";
@@ -310,6 +312,11 @@
 "Contacts.InviteToTelegram" = "Invitar a Telegram";
 "Contacts.InviteFriends" = "Invitar a amigos";
 "Contacts.SelectAll" = "Elegir todos";
+
+// Redmine
+"Redmine.TabTitle" = "Redmine";
+"Redmine.ErrorKey" = "Api clave no encontrada. Por favor ingrese la configuración en la clave de Redmine Api.";
+"Redmine.ErrorAddress" = "Dirección de Redmine no encontrada. Introduzca la dirección en la configuración en la 'Dirección de Redmine'.";
 
 // Conversation
 "Conversation.InputTextPlaceholder" = "Mensaje";
@@ -610,6 +617,12 @@
 "Settings.ChatSettings" = "Datos y almacenamiento";
 "Settings.BlockedUsers" = "Usuarios bloqueados";
 "Settings.ChatBackground" = "Fondo de chat";
+"Settings.RedmineAddress" = "Redmine Address";
+"Settings.RedmineKey" = "Redmine Api Key";
+"Settings.RedmineAddressMessage" = "Enter or change the address.";
+"Settings.RedmineMessage" = "Enter or change the key.";
+"Settings.RedmineAddressPlaseholder" = "Address";
+"Settings.RedminePlaseholder" = "API key";
 "Settings.Support" = "Hacer una pregunta";
 "Settings.FAQ" = "Preguntas frecuentes";
 "Settings.FAQ_URL" = "https://telegram.org/faq/es";

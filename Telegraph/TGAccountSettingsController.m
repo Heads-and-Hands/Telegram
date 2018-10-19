@@ -97,6 +97,8 @@
     TGDisclosureActionCollectionItem *_callSettingsItem;
     TGDisclosureActionCollectionItem *_savedMessagesItem;
     TGDisclosureActionCollectionItem *_stickerSettingsItem;
+    TGDisclosureActionCollectionItem *_redmineAddressItem;
+    TGDisclosureActionCollectionItem *_redmineKeyItem;
     TGDisclosureActionCollectionItem *_supportItem;
     TGDisclosureActionCollectionItem *_faqItem;
     
@@ -207,6 +209,18 @@
             [strongSelf.menuSections commitRecordedChanges:strongSelf.collectionView];
         }]];
         
+        _redmineAddressItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.RedmineAddress") action:@selector(redmineAddressPressed)];
+        _redmineAddressItem.deselectAutomatically = true;
+        
+        _redmineKeyItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.RedmineKey") action:@selector(redmineKeyPressed)];
+        _redmineKeyItem.deselectAutomatically = true;
+        
+        TGCollectionMenuSection *redmineSection = [[TGCollectionMenuSection alloc] initWithItems:@[
+            _redmineAddressItem,
+            _redmineKeyItem
+        ]];
+        [self.menuSections addSection:redmineSection];
+        
         _supportItem = [[TGDisclosureActionCollectionItem alloc] initWithTitle:TGLocalized(@"Settings.Support") action:@selector(supportPressed)];
         _supportItem.deselectAutomatically = true;
         
@@ -251,6 +265,8 @@
     _stickerSettingsItem.icon = TGImageNamed(@"SettingsStickersIcon.png");
     _languageItem.icon = TGImageNamed(@"SettingsLanguageIcon.png");
     _watchItem.icon = TGImageNamed(@"SettingsWatchIcon.png");
+    _redmineAddressItem.icon = TGImageNamed(@"SettingsRedmineAddressIcon.png");
+    _redmineKeyItem.icon = TGImageNamed(@"SettingsRedmineKeyIcon.png");
     _supportItem.icon = TGImageNamed(@"SettingsSupportIcon.png");
     _faqItem.icon = TGImageNamed(@"SettingsFaqIcon.png");
     if (_callSettingsItem != nil)
@@ -611,6 +627,57 @@
     }] show];
 }
 
+- (void)redmineAddressPressed
+{
+    NSString *userDefaultsKey = @"RedmineAddress";
+    
+    UIAlertController* alert= [UIAlertController alertControllerWithTitle:TGLocalized(@"Settings.RedmineAddress")
+                                                                  message:TGLocalized(@"Settings.RedmineAddressMessage") preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* actionOK = [UIAlertAction actionWithTitle:TGLocalized(@"Common.OK") style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action){
+                                                         [[NSUserDefaults standardUserDefaults] setObject:alert.textFields[0].text forKey:userDefaultsKey];
+                                                     }];
+    
+    UIAlertAction* actionCancel = [UIAlertAction actionWithTitle:TGLocalized(@"Common.Cancel") style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:actionCancel];
+    [alert addAction:actionOK];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = TGLocalized(@"Settings.RedmineAddressPlaseholder");
+        textField.text = [[NSUserDefaults standardUserDefaults] objectForKey:userDefaultsKey];
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+
+- (void)redmineKeyPressed
+{
+    NSString *userDefaultsKey = @"RedmineApiKey";
+    
+    UIAlertController* alert= [UIAlertController alertControllerWithTitle:TGLocalized(@"Settings.RedmineKey")
+                                                                  message:TGLocalized(@"Settings.RedmineMessage") preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* actionOK = [UIAlertAction actionWithTitle:TGLocalized(@"Common.OK") style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action){
+                                                         [[NSUserDefaults standardUserDefaults] setObject:alert.textFields[0].text forKey:userDefaultsKey];
+                                                     }];
+    
+    UIAlertAction* actionCancel = [UIAlertAction actionWithTitle:TGLocalized(@"Common.Cancel") style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:actionCancel];
+    [alert addAction:actionOK];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = TGLocalized(@"Settings.RedminePlaseholder");
+        textField.text = [[NSUserDefaults standardUserDefaults] objectForKey:userDefaultsKey];
+    }];
+
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void)faqPressed
 {
     [TGAppDelegateInstance handleOpenInstantView:TGLocalized(@"Settings.FAQ_URL")];
@@ -870,6 +937,9 @@
     _wallpapersItem.title = TGLocalized(@"Settings.ChatBackground");
     _supportItem.title = TGLocalized(@"Settings.Support");
     _callSettingsItem.title = TGLocalized(@"CallSettings.RecentCalls");
+    
+    _redmineAddressItem.title = TGLocalized(@"Settings.RedmineAddress");
+    _redmineKeyItem.title = TGLocalized(@"Settings.RedmineKey");
     
     _faqItem.title = TGLocalized(@"Settings.FAQ");
     

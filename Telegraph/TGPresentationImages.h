@@ -11,6 +11,7 @@
 IMAGE tabBarContactsIcon;
 IMAGE tabBarCallsIcon;
 IMAGE tabBarChatsIcon;
+IMAGE tabBarRedmineIcon;
 IMAGE tabBarSettingsIcon;
 IMAGE tabBarBadgeImage;
 

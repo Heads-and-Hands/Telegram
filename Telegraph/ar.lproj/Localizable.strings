@@ -85,6 +85,8 @@
 // Common
 "Common.OK" = "موافق";
 "Common.Cancel" = "إلغاء";
+"Common.Error" = "خطأ";
+"Common.Reloading" = "إعادة";
 "Common.Edit" = "تعديل";
 "Common.edit" = "تعديل";
 "Common.Done" = "تم";
@@ -310,6 +312,11 @@
 "Contacts.InviteToTelegram" = "قم بدعوة صديق لتيليجرام";
 "Contacts.InviteFriends" = "قم بدعوة صديق";
 "Contacts.SelectAll" = "اختر الكل";
+
+// Redmine
+"Redmine.TabTitle" = "Redmine";
+"Redmine.ErrorKey" = "لم يتم العثور على مفتاح Api. يرجى إدخال الإعدادات في 'Redmine Api Key'.";
+"Redmine.ErrorAddress" = "عنوان Redmine غير موجود. يرجى إدخال العنوان في الإعدادات في 'Redmine address'.";
 
 // Conversation
 "Conversation.InputTextPlaceholder" = "الرسالة";
@@ -610,6 +617,12 @@
 "Settings.ChatSettings" = "البيانات والتخزين";
 "Settings.BlockedUsers" = "جهات الاتصال المحظورة";
 "Settings.ChatBackground" = "خلفية الدردشة";
+"Settings.RedmineAddress" = "Redmine Address";
+"Settings.RedmineKey" = "Redmine Api Key";
+"Settings.RedmineAddressMessage" = "أدخل أو تغيير العنوان.";
+"Settings.RedmineMessage" = "أدخل أو غير المفتاح.";
+"Settings.RedmineAddressPlaseholder" = "عنوان";
+"Settings.RedminePlaseholder" = "API key";
 "Settings.Support" = "اسأل سؤالًا";
 "Settings.FAQ" = "الأسئلة الشائعة عن تيليجرام";
 "Settings.FAQ_URL" = "https://telegram.org/faq/ar";

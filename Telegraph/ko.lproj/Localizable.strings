@@ -85,6 +85,8 @@
 // Common
 "Common.OK" = "확인";
 "Common.Cancel" = "취소";
+"Common.Error" = "오류";
+"Common.Reloading" = "다시로드 중";
 "Common.Edit" = "수정";
 "Common.edit" = "숮어";
 "Common.Done" = "완료";
@@ -310,6 +312,11 @@
 "Contacts.InviteToTelegram" = "텔레그램으로 초대";
 "Contacts.InviteFriends" = "친구 초대";
 "Contacts.SelectAll" = "전체 선택";
+
+// Redmine
+"Redmine.TabTitle" = "Redmine";
+"Redmine.ErrorKey" = "API 키를 찾을 수 없습니다. Redmine API 키에 설정을 입력하십시오.";
+"Redmine.ErrorAddress" = "Redmine 주소를 찾을 수 없습니다. 'Redmine address'의 설정에 주소를 입력하십시오.";
 
 // Conversation
 "Conversation.InputTextPlaceholder" = "메시지";
@@ -610,6 +617,12 @@
 "Settings.ChatSettings" = "데이터 및 저장소";
 "Settings.BlockedUsers" = "차단 목록";
 "Settings.ChatBackground" = "채팅방 배경화면";
+"Settings.RedmineAddress" = "Redmine 주소";
+"Settings.RedmineKey" = "Redmine API 키";
+"Settings.RedmineAddressMessage" = "주소를 입력하거나 변경하십시오.";
+"Settings.RedmineMessage" = "키를 입력하거나 변경하십시오";
+"Settings.RedmineAddressPlaseholder" = "주소";
+"Settings.RedminePlaseholder" = "API 키";
 "Settings.Support" = "질문하기";
 "Settings.FAQ" = "자주 묻는 질문";
 "Settings.FAQ_URL" = "https://telegram.org/faq/ko";

@@ -293,6 +293,7 @@
 @property (nonatomic, strong) TGTabBarButton *contactsButton;
 @property (nonatomic, strong) TGTabBarButton *callsButton;
 @property (nonatomic, strong) TGTabBarButton *chatsButton;
+@property (nonatomic, strong) TGTabBarButton *redmineButton;
 @property (nonatomic, strong) TGTabBarButton *settingsButton;
 @property (nonatomic, assign) bool callsHidden;
 
@@ -333,6 +334,7 @@
         
         _contactsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarContactsIcon title:TGLocalized(@"Contacts.TabTitle") presentation:presentation];
         _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation];
+        _redmineButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarRedmineIcon title:TGLocalized(@"Redmine.TabTitle") presentation:presentation];
         _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
         _callsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarCallsIcon title:TGLocalized(@"Calls.TabTitle") presentation:presentation];
         _callsButton.hidden = true;
@@ -341,6 +343,7 @@
         [_tabButtons addObject:_contactsButton];
         [_tabButtons addObject:_callsButton];
         [_tabButtons addObject:_chatsButton];
+        [_tabButtons addObject:_redmineButton];
         [_tabButtons addObject:_settingsButton];
         
         for (TGTabBarButton *button in _tabButtons)
@@ -358,10 +361,12 @@
     
     [_contactsButton setImage:presentation.images.tabBarContactsIcon presentation:presentation];
     [_chatsButton setImage:presentation.images.tabBarChatsIcon presentation:presentation];
+    [_redmineButton setImage:presentation.images.tabBarRedmineIcon presentation:presentation];
     [_settingsButton setImage:presentation.images.tabBarSettingsIcon presentation:presentation];
     [_callsButton setImage:presentation.images.tabBarCallsIcon presentation:presentation];
     
     _chatsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarChatsIcon title:TGLocalized(@"DialogList.TabTitle") presentation:presentation];
+    _redmineButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarRedmineIcon title:TGLocalized(@"Redmine.TabTitle") presentation:presentation];
     _settingsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarSettingsIcon title:TGLocalized(@"Settings.TabTitle") presentation:presentation];
     _callsButton = [[TGTabBarButton alloc] initWithImage:presentation.images.tabBarCallsIcon title:TGLocalized(@"Calls.TabTitle") presentation:presentation];
     
@@ -431,13 +436,13 @@
     [super touchesBegan:touches withEvent:event];
     
     UITouch *touch = [touches anyObject];
-    NSInteger buttonsCount = _callsHidden ? 3 : 4;
+    NSInteger buttonsCount = _callsHidden ? 4 : 5;
     CGPoint location = [touch locationInView:self];
     if (location.y > [TGTabBar tabBarHeight:_landscape])
         return;
     
     int index = MAX(0, MIN((int)buttonsCount - 1, (int)(location.x / (self.frame.size.width / buttonsCount))));
-    if (buttonsCount == 3 && index > 0)
+    if (buttonsCount == 4 && index > 0)
         index += 1;
     [self setSelectedIndex:index];
     
@@ -491,13 +496,13 @@
     
     CGFloat width = viewSize.width - self.safeAreaInset.left - self.safeAreaInset.right;
     
-    NSUInteger buttonsCount = _callsHidden ? 3 : 4;
+    NSUInteger buttonsCount = _callsHidden ? 4 : 5;
     CGFloat buttonWidth = floor(width / buttonsCount);
     
     [_tabButtons enumerateObjectsUsingBlock:^(TGTabBarButton *button, NSUInteger index, __unused BOOL *stop)
     {
         NSInteger realIndex = index;
-        if (buttonsCount == 3 && index > 1)
+        if (buttonsCount == 4 && index > 1)
             index--;
         
         button.landscape = self.landscape;

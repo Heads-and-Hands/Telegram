@@ -7,6 +7,7 @@
 #import "TGTabletMainView.h"
 
 #import "TGDialogListController.h"
+#import "TGRedmineViewController.h"
 #import "TGTelegraphDialogListCompanion.h"
 #import "TGContactsController.h"
 #import "TGAccountSettingsController.h"
@@ -58,6 +59,9 @@
         _dialogListController = [[TGDialogListController alloc] initWithCompanion:dialogListCompanion];
         _dialogListController.presentation = _presentation;
         
+        _redmineViewController = [[TGRedmineViewController alloc] init];
+        _redmineViewController.presentation = _presentation;
+        
         _contactsController = [[TGContactsController alloc] initWithContactsMode:TGContactsModeMainContacts | TGContactsModeRegistered | TGContactsModePhonebook | TGContactsModeSortByLastSeen];
         
         _accountSettingsController = [[TGAccountSettingsController alloc] initWithUid:0];
@@ -72,7 +76,7 @@
         };
         
         _mainTabsController = [[TGMainTabsController alloc] initWithPresentation:_presentation];
-        [_mainTabsController setViewControllers:[NSArray arrayWithObjects:_contactsController, _callsController, _dialogListController, _accountSettingsController, nil]];
+        [_mainTabsController setViewControllers:[NSArray arrayWithObjects:_contactsController, _callsController, _dialogListController, _redmineViewController, _accountSettingsController, nil]];
         [_mainTabsController setCallsHidden:!TGAppDelegateInstance.showCallsTab animated:false];
         _mainTabsController.onControllerInsetUpdated = ^(CGFloat inset)
         {
